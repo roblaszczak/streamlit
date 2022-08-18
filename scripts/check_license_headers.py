@@ -38,7 +38,8 @@ IGNORE_PATTERN = re.compile(
     r"|/yarn\.lock$"  # Exclude generated files
     r"|/(fixtures|__snapshots__|vendor|test_data|data)/"  # Exclude fixtures data
     r"|py\.typed$"  # Exclude empty file
-    "|.prettierrc$",  # Exclude this file, because it doesn't support comments
+    r"|.prettierrc$"  # Exclude this file, because it doesn't support comments
+    r"|.nvmrc$",  # Exclude this file, because it doesn't support comments
     re.IGNORECASE,
 )
 
