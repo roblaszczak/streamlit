@@ -32,8 +32,8 @@ import { zip } from "lodash"
 describe("doHealthPing", () => {
   const MOCK_PING_DATA = {
     uri: [
-      "https://not.a.real.host:3000/healthz",
-      "https://not.a.real.host:3001/healthz",
+      "https://not.a.real.host:3000/streamlit-healthz",
+      "https://not.a.real.host:3001/streamlit-healthz",
     ],
     timeoutMs: 10,
     maxTimeoutMs: 100,
@@ -180,8 +180,8 @@ describe("doHealthPing", () => {
     const MOCK_PING_DATA_LOCALHOST = {
       ...MOCK_PING_DATA,
       uri: [
-        "https://localhost:3000/healthz",
-        "https://localhost:3001/healthz",
+        "https://localhost:3000/streamlit-healthz",
+        "https://localhost:3001/streamlit-healthz",
       ],
     }
 
@@ -341,7 +341,7 @@ describe("doHealthPing", () => {
     }
 
     await doHealthPing(
-      ["https://not.a.real.host:3000/healthz"],
+      ["https://not.a.real.host:3000/streamlit-healthz"],
       MOCK_PING_DATA.timeoutMs,
       MOCK_PING_DATA.maxTimeoutMs,
       callback,
@@ -421,7 +421,7 @@ describe("doHealthPing", () => {
     }
 
     await doHealthPing(
-      ["https://not.a.real.host:3000/healthz"],
+      ["https://not.a.real.host:3000/streamlit-healthz"],
       MOCK_PING_DATA.timeoutMs,
       MOCK_PING_DATA.maxTimeoutMs,
       callback,
@@ -437,7 +437,7 @@ describe("doHealthPing", () => {
     }
 
     await doHealthPing(
-      ["https://not.a.real.host:3000/healthz"],
+      ["https://not.a.real.host:3000/streamlit-healthz"],
       MOCK_PING_DATA.timeoutMs,
       MOCK_PING_DATA.maxTimeoutMs,
       callback2,
