@@ -358,7 +358,7 @@ class Server:
                 dict(server=self),
             ),
             (
-                make_url_path_regex(base, "healthz"),
+                make_url_path_regex(base, "streamlit-healthz"),
                 HealthHandler,
                 dict(callback=lambda: self.is_ready_for_browser_connection),
             ),
